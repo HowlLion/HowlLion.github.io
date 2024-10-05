@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="C:\Users\HowlLion\Desktop\HowlLion.github.io\media\favicon.ico" type="image/x-icon">
+    <title>User Reviews Analysis Model - Nordvtech Ltd</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        body {
+    display: flex;
+    justify-content: center;
+    padding: 20px;
+    background-color: #4686e0;
+}
+
+main {
+    display: grid;
+    grid-template-columns: 1fr 4fr; /* 1:4 ratio */
+    gap: 20px;
+    width: 80%;
+    max-width: 1200px;
+    background-color: #665c5c;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+.project-card {
+    padding: 20px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    background-color: #4686e0;
+}
+
+.image-container {
+    display: flex;
+    flex-direction: column; /* Stack images vertically */
+    align-items: flex-start; /* Align images to the left */
+    flex-wrap: wrap; /* Allow images to wrap if needed */
+}
+
+.image-container img {
+    max-width: 100%; /* Ensure images scale with their container */
+    height: auto; /* Maintain aspect ratio */
+    margin-bottom: 10px; /* Space below images */
+}
+
+.back-to-home-btn {
+    display: block;
+    margin-top: 20px;
+    padding: 10px 15px;
+    background-color: #333333;
+    color: #ffffff;
+    text-align: center;
+    text-decoration: none;
+    border-radius: 5px;
+    width: fit-content;
+}
+
+.back-to-home-btn:hover {
+    background-color: #555555;
+}
+
+    </style>
+</head>
+<body>
+
+    <main>
+        <div class="project-card">
+            <h3 style="color: rgb(70, 75, 70); font-size: 1.8em; margin-bottom: 10px;">User Reviews Analysis Model - Nordvtech Ltd</h3>
+            <p style="color: rgb(61, 65, 61); line-height: 1.6; font-size: 1.1em;">
+                Designed and implemented a sentiment analysis model leveraging NLP techniques to analyze customer reviews across various platforms. 
+                This model identifies user sentiment—positive, negative, or neutral—providing businesses with actionable insights to enhance customer experience and inform decision-making processes.
+            </p>
+            <p style="color: rgb(56, 59, 56); font-weight: bold;">Key Achievements:</p>
+            <ul style="color: rgb(59, 63, 59); margin-left: 20px; line-height: 1.5;">
+                <li><strong>Data Gathering:</strong> Collected user reviews from online sources and social media, ensuring a rich and diverse dataset for analysis.</li>
+                <li><strong>Text Processing:</strong> Employed NLTK and spaCy for text normalization, stemming, and lemmatization to prepare data for analysis.</li>
+                <li><strong>Sentiment Classification:</strong> Developed machine learning models using TensorFlow to classify sentiments, employing LSTM networks to capture sequential dependencies in text.</li>
+                <li><strong>Evaluation Metrics:</strong> Achieved an accuracy of 91% and an F1 score of 0.88, demonstrating robust model performance across diverse review types.</li>
+                <li><strong>Visualization:</strong> Utilized Matplotlib and Seaborn for data visualization, enabling clear representation of sentiment trends over time.</li>
+            </ul>
+            <p style="color: rgb(78, 87, 78); line-height: 1.6; font-size: 1.1em;">
+                This model empowered the business to understand customer sentiment better, leading to strategic improvements in products and services based on user feedback.
+            </p>
+            <a href="index.html" class="back-to-home-btn">Back to Home</a>
+        </div>
+        
+        <div class="image-container">
+            <img src="C:\Users\HowlLion\Desktop\HowlLion.github.io\media\Exp\sentiment.png" alt="Electrix Project Image">
+            <img src="C:\Users\HowlLion\Desktop\HowlLion.github.io\media\Exp\sentiment1.jpeg" alt="Electrix Project Image">
+            <img src="C:\Users\HowlLion\Desktop\HowlLion.github.io\media\Exp\sentiment2.png" alt="Electrix Project Image">
+            <img src="C:\Users\HowlLion\Desktop\HowlLion.github.io\media\Exp\sentiment3.jpeg" alt="Electrix Project Image">
+            <img src="C:\Users\HowlLion\Desktop\HowlLion.github.io\media\Exp\sentiment4.jpeg" alt="Electrix Project Image">
+            <img src="C:\Users\HowlLion\Desktop\HowlLion.github.io\media\Exp\sentiment5.png" alt="Electrix Project Image">
+        </div>
+    </main>
+</body>
+</html>
