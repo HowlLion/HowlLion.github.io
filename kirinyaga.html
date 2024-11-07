@@ -40,7 +40,15 @@
             color: #ff6347;
         }
 
-
+        /* Hero Section */
+        .hero {
+            background: linear-gradient(to right, rgba(106, 17, 203, 0.7), rgba(37, 117, 252, 0.7)); /* Gradient only */
+            color: white;
+            padding: 100px 20px;
+            text-align: left;
+            position: relative;
+            z-index: 1;
+        }
 
         .hero h1 {
             font-size: 50px;
@@ -74,9 +82,8 @@
             padding: 60px 20px;
             max-width: 1200px;
             margin: 0 auto;
-            background-color: rgba(255, 255, 255, 0.9); /* Slight opacity for the sections */
+            background-color: rgba(255, 255, 255, 0.9); /* Slight opacity for sections */
             border-radius: 10px;
-            z-index: 0;
             margin-top: -50px; /* Adjust to move up section */
         }
 
@@ -91,14 +98,10 @@
             line-height: 1.6;
         }
 
-        /* Project Section */
+        /* Project Section without boxes */
         .project {
-    background-color: rgba(255, 255, 255, 0.8); /* Adjust opacity as needed */
-    padding: 30px;
-    border-radius: 8px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    margin-bottom: 30px;
-}
+            margin-bottom: 30px;
+        }
 
         .project h4 {
             font-size: 28px;
@@ -167,6 +170,7 @@
 
 <section id="projects">
     <h3>Highlighted Projects</h3>
+
     <div class="project">
         <h4>IT Infrastructure Enhancement and Support Initiative</h4>
         <ul>
@@ -183,6 +187,7 @@
         </ul>
         <p><strong>Outcome:</strong> The project resulted in improved network performance, reduced downtime, and greater user satisfaction, with a 30% reduction in IT-related disruptions.</p>
     </div>
+
 </section>
 
 <footer>
