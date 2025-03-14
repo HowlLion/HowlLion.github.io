@@ -1,13 +1,45 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+    <!-- Basic Meta Tags -->
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Samuel Wachira: Machine Learning Engineer specializing in NLP, computer vision, and data analytics. Portfolio showcasing security vulnerability models and biometric systems.">
+    <meta name="keywords" content="machine learning engineer, data analyst, NLP, TensorFlow, Python, Samuel Wachira">
+    <meta name="author" content="Samuel Wachira">
+    
+    <!-- Open Graph/Facebook/LinkedIn Cards -->
+    <meta property="og:title" content="Samuel Wachira | Machine Learning Engineer">
+    <meta property="og:description" content="Portfolio of Samuel Wachira, showcasing machine learning and data analysis projects.">
+    <meta property="og:image" content="https://howllion.github.io/media/profile.jpg">
+    <meta property="og:url" content="https://howllion.github.io">
+    <meta property="og:type" content="website">
+    
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Samuel Wachira | Machine Learning Engineer">
+    <meta name="twitter:description" content="Portfolio showcasing machine learning and data analysis projects.">
+    <meta name="twitter:image" content="https://howllion.github.io/media/profile.jpg">
+
+    <!-- Favicon -->
     <link rel="icon" href="media/favicon.ico" type="image/x-icon">
-    <title>Samuel Wachira | Machine Learning Engineer</title>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    
+    <!-- Title -->
+    <title>Samuel Wachira | Machine Learning Engineer & Data Analyst</title>
+    
+    <!-- Styles -->
     <link rel="stylesheet" href="style.css">
+    
+    <!-- Google Analytics (Replace G-XXXXXX with your ID) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-XXXXXX"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+        gtag('config', 'G-XXXXXX');
+    </script>
 </head>
+
 <body>
     <!-- Navigation -->
     <nav class="sticky-nav">
@@ -20,11 +52,6 @@
                 <li><a href="#skills">Skills</a></li>
                 <li><a href="#contact">Contact</a></li>
             </ul>
-            <div class="hamburger">
-                <div class="bar"></div>
-                <div class="bar"></div>
-                <div class="bar"></div>
-            </div>
         </div>
     </nav>
 
@@ -34,24 +61,22 @@
             <h1 class="hero-title">Samuel Wachira</h1>
             <p class="hero-subtitle">Machine Learning Engineer</p>
             <div class="social-links">
-                <a href="https://linkedin.com/in/samuelwachira" target="_blank"><i class="fab fa-linkedin"></i></a>
-                <a href="https://github.com/HowlLion" target="_blank"><i class="fab fa-github"></i></a>
-                <a href="mailto:samuelwachira611@gmail.com"><i class="fas fa-envelope"></i></a>
+                <a href="https://linkedin.com/in/samuelwachira" aria-label="LinkedIn" target="_blank"><i class="fab fa-linkedin"></i></a>
+                <a href="https://github.com/HowlLion" aria-label="GitHub" target="_blank"><i class="fab fa-github"></i></a>
+                <a href="mailto:samuelwachira611@gmail.com" aria-label="Email"><i class="fas fa-envelope"></i></a>
             </div>
-            <a href="#projects" class="cta-btn">View My Work <i class="fas fa-arrow-down"></i></a>
         </div>
     </section>
 
-    <!-- Projects Section (Updated Structure) -->
+    <!-- Projects Section -->
     <section id="projects" class="section projects-section">
         <h2 class="section-title">Featured Projects</h2>
         <div class="projects-grid">
-            <!-- Project cards remain similar but with added hover effects -->
-            <!-- Add data-category attributes for potential filtering -->
-            <div class="project-card" data-category="ml">
-                <div class="project-image">
-                    <img src="media/Exp/vulnerabilitym.jpeg" alt="Security Vulnerability Model">
-                </div>
+            <!-- Project 1 -->
+            <article class="project-card">
+                <img src="media/Exp/vulnerabilitym.jpeg" 
+                     alt="Security vulnerability model interface" 
+                     class="project-image">
                 <div class="project-info">
                     <h3>Security Vulnerability Model</h3>
                     <div class="tech-stack">
@@ -59,84 +84,50 @@
                         <span>NLP</span>
                         <span>Python</span>
                     </div>
-                    <a href="electrix.html" class="project-link">View Details <i class="fas fa-arrow-right"></i></a>
+                    <a href="electrix.html" class="project-link">View Details →</a>
                 </div>
-            </div>
-            <!-- Repeat similar structure for other projects -->
+            </article>
+            <!-- Repeat for other projects -->
         </div>
     </section>
 
-    <!-- Skills Section (Enhanced) -->
-    <section id="skills" class="section skills-section">
-        <h2 class="section-title">Technical Skills</h2>
-        <div class="skills-grid">
-            <div class="skill-item">
-                <i class="fab fa-python"></i>
-                <h3>Python</h3>
-                <div class="skill-progress">
-                    <div class="progress-bar" style="width: 90%"></div>
-                </div>
-            </div>
-            <div class="skill-item">
-                <i class="fas fa-brain"></i>
-                <h3>TensorFlow</h3>
-                <div class="skill-progress">
-                    <div class="progress-bar" style="width: 85%"></div>
-                </div>
-            </div>
-            <!-- Add other skills with similar structure -->
-        </div>
-    </section>
+    <!-- Structured Data -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "Person",
+        "name": "Samuel Wachira",
+        "jobTitle": "Machine Learning Engineer",
+        "url": "https://howllion.github.io",
+        "sameAs": [
+            "https://linkedin.com/in/samuelwachira",
+            "https://github.com/HowlLion"
+        ],
+        "image": "https://howllion.github.io/media/profile.jpg",
+        "description": "Machine Learning Engineer specializing in NLP and computer vision.",
+        "skills": "Python, TensorFlow, PyTorch, NLP, Data Analysis"
+    }
+    </script>
 
-    <!-- About Section (Enhanced) -->
-    <section id="about" class="section about-section">
-        <div class="about-container">
-            <div class="about-image">
-                <img src="media/profile.jpg" alt="Samuel Wachira">
-            </div>
-            <div class="about-content">
-                <h2 class="section-title">About Me</h2>
-                <p class="about-text">...</p>
-                <a href="media/resume.pdf" download class="cta-btn">Download Resume</a>
-            </div>
-        </div>
-    </section>
+    <!-- Robots.txt (Virtual) -->
+    <!-- 
+    Create a physical robots.txt file in your repo root with:
+    User-agent: *
+    Allow: /
+    Sitemap: https://howllion.github.io/sitemap.xml
+    -->
 
-    <!-- Contact Section (Enhanced) -->
-    <section id="contact" class="section contact-section">
-        <h2 class="section-title">Get in Touch</h2>
-        <div class="contact-container">
-            <div class="contact-info">
-                <div class="info-item">
-                    <i class="fas fa-map-marker-alt"></i>
-                    <p>Nairobi, Kenya</p>
-                </div>
-                <div class="info-item">
-                    <i class="fas fa-envelope"></i>
-                    <p>samuelwachira611@gmail.com</p>
-                </div>
-                <!-- Add other contact info -->
-            </div>
-            <form class="contact-form">
-                <!-- Form fields remain similar -->
-            </form>
-        </div>
-    </section>
-
-    <!-- Footer -->
-    <footer class="footer">
-        <div class="footer-content">
-            <p>&copy; 2024 Samuel Wachira</p>
-            <div class="footer-links">
-                <a href="#privacy">Privacy</a>
-                <a href="#terms">Terms</a>
-            </div>
-        </div>
-    </footer>
-
-    <!-- Back to Top Button -->
-    <button class="back-to-top"><i class="fas fa-arrow-up"></i></button>
-
-    <script src="script.js"></script>
+    <!-- Sitemap (Virtual) -->
+    <!-- 
+    Create a physical sitemap.xml file in your repo root with:
+    <?xml version="1.0" encoding="UTF-8"?>
+    <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+        <url>
+            <loc>https://howllion.github.io/</loc>
+            <lastmod>2024-03-15</lastmod>
+            <priority>1.0</priority>
+        </url>
+    </urlset>
+    -->
 </body>
 </html>
