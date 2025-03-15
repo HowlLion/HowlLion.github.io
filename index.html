@@ -3,28 +3,99 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="icon" href="HowlLion.github.io\media\favicon.ico" type="image/x-icon">
+    <link rel="icon" href="media/favicon.ico" type="image/x-icon">
     <title>Machine Learning Engineer | Portfolio</title>
     <link rel="stylesheet" href="style.css">
-</heaaad>
+  <style>
+    /* CSS styles for the header */
+    .head {
+      background-color: #f2f2f2;
+      padding: 10px;
+      text-align: center;
+    }
+
+    /* CSS styles for the navigation menu */
+    .nav {
+      list-style-type: none;
+      margin: 0;
+      padding: 0;
+      overflow: hidden;
+    }
+
+    .nav li {
+      float: left;
+    }
+
+    .nav li a {
+      display: block;
+      padding: 8px 16px;
+      text-decoration: none;
+    }
+
+    /* CSS styles for the search bar */
+    .search {
+      float: right;
+    }
+
+    /* CSS styles for the search input */
+    .search input[type="text"] {
+      padding: 6px;
+      margin-top: 8px;
+      font-size: 17px;
+      border: none;
+    }
+
+    /* CSS styles for the search button */
+    .search button {
+      padding: 6px 10px;
+      margin-top: 8px;
+      margin-left: 5px;
+      background: #ddd;
+      font-size: 17px;
+      border: none;
+      cursor: pointer;
+    }
+
+    /* CSS styles for the responsive design */
+    @media screen and (max-width: 600px) {
+      .nav li {
+        float: none;
+      }
+
+      .nav li a {
+        display: block;
+        text-align: left;
+      }
+
+      .search {
+        float: none;
+        margin-top: 10px;
+      }
+    }
+  </style>
+</head>
 <body>
-    <!-- Header Section -->
-    <header>
-        <nav>
-            <ul>
-                <li><a href="#home">Home</a></li>
-                <li><a href="#about">About</a></li>
-                <li><a href="#projects">Projects</a></li>
-                <li><a href="#skills">Skills</a></li>
-                <li><a href="#contact">Contact</a></li>
-            </ul>
-        </nav>
-        <div class="hero">
-            <h1>Hi, I'm Samuel Wachira</h1>
-            <p>Machine Learning Engineer & Data Analyst</p>
+  <header class="header">
+    <nav class="nav">
+      <ul>
+        <li><a href="#">Home</a></li>
+        <li><a href="#">About</a></li>
+        <li><a href="#">Projects</a></li>
+        <li><a href="#">Skills</a></li>
+          <li><a href="#">Contact</a></li>
+      </ul>
+    </nav>
+    <div class="search">
+      <input type="text" placeholder="Search...">
+      <button>Search</button>
+    </div>
+      <div class="hero">
+            <h1>Hi, I'm Samuel Wachira</h1><br>
+            <h2>Machine Learning Engineer & Data Analyst</h2>
             <a href="#projects" class="cta-btn">See My Work</a>
-        </div>
-    </header>
+        </div
+  </header>
+</body>
 
 
     
@@ -33,21 +104,21 @@
     <section id="projects" class="projects-section">
         <h2>Projects</h2>
         <div class="projects-container">
-            <!-- Project 1: Electrix Ltd -->
+            <!-- Project 1: Remote -->
             <div class="project-card">
-                <img src="HowlLion.github.io\media\Exp\vulnerabilitym.jpeg" alt="Electrix Ltd Project" class="project-image">
+                <img src="media\Exp\vulnerabilitym.jpeg" alt="Remote Project" class="project-image">
                 <div class="project-info">
-                    <h3>Security Vulnerability Model - Electrix Ltd</h3>
+                    <h3>Security Vulnerability Model - Remote</h3>
                     <p>Used NLP with TensorFlow to develop a supervised ML model that identifies and prioritizes security vulnerabilities, enhancing security posture and customer trust.</p>
                     <a href="electrix.html" class="details-btn"">Learn More</a>
                 </div>
             </div>
     
-            <!-- Project 2: Logitech Solution Enterprises -->
+            <!-- Project 2: Remote -->
             <div class="project-card">
-                <img src="HowlLion.github.io\media\Exp\biometricm.jpeg" alt="Logitech Biometric Model" class="project-image">
+                <img src="media\Exp\biometricm.jpeg" alt="Remote Biometric Model" class="project-image">
                 <div class="project-info">
-                    <h3>Biometric Identification Model - Logitech Solutions</h3>
+                    <h3>Biometric Identification Model - Remote</h3>
                     <p>Developed a supervised ML model using CNNs, TensorFlow, and OpenCV to improve user authentication systems with enhanced security and efficiency.</p>
                     <a href="Logitech.html" class="details-btn">Learn More</a>
                 </div>
@@ -55,11 +126,22 @@
     
             <!-- Project 3: Nordvtech Ltd -->
             <div class="project-card">
-                <img src="HowlLion.github.io\media\Exp\userreviewm.jpeg" alt="Nordvtech Project" class="project-image">
+                <img src="media\Exp\userreviewm.jpeg" alt="Nordvtech Project" class="project-image">
                 <div class="project-info">
                     <h3>User Reviews Analysis Model - Nordvtech Ltd</h3>
                     <p>Designed an NLP-driven supervised ML model to analyze customer reviews, improving insights, efficiency, and decision-making for business growth.</p>
                     <a href="Nordvtech.html" class="details-btn">Learn More</a>
+                </div>
+            </div>
+                        <!-- Project 4: Kirinyaga County Govt -->
+            <div class="project-card">
+                <img src="media\Exp\kirinyagauprising.jpeg" alt="Kirinyaga Project" class="project-image">
+                <div class="project-info">
+                    <h3>Network Setup and Optimization</h3>
+                    <h3>Technical Troubleshooting and Support</h3>
+                    <h3>Hardware and Software Maintenance</h3>
+                    <p>Through this project, I significantly improved network reliability and reduced system downtime, enabling smoother daily operations for all users. This boosted response efficiency and user satisfaction across the institution.</p>
+                    <a href="kirinyaga.html" class="details-btn">Learn More</a>
                 </div>
             </div>
         </div>
@@ -169,16 +251,16 @@
         <div class="contact-container">
             <div class="contact-info">
                 <div class="contact-item">
-                    <img src="HowlLion.github.io\media\Icons\mail.jpeg" alt="Email Icon" class="contact-icon">
-                    <p>Email: <a href="mailto:your-email@example.com">samuelwachira611@gmail.com</a></p>
+                    <img src="media\Icons\mail.jpeg" alt="Email Icon" class="contact-icon">
+                    <p>Email: <a href="mailto:samuelwachira611@gmail.com">Mail</a></p>
                 </div>
                 <div class="contact-item">
-                    <img src="HowlLion.github.io\media\Icons\linkedin.png" alt="LinkedIn Icon" class="contact-icon">
-                    <p>LinkedIn: <a href="https://www.linkedin.com/in/your-profile/" target="_blank">https://linkedin.com/samuelwachira</a></p>
+                    <img src="media\Icons\linkedin.png" alt="LinkedIn Icon" class="contact-icon">
+                    <p>LinkedIn: <a href="https://linkedin.com/samuelwachira" target="_blank">LinkedIn</a></p>
                 </div>
                 <div class="contact-item">
-                    <img src="HowlLion.github.io\media\Icons\github.png" alt="GitHub Icon" class="contact-icon">
-                    <p>GitHub: <a href="https://github.com/your-username" target="_blank">https://github.com/HowlLion</a></p>
+                    <img src="media\Icons\github.png" alt="GitHub Icon" class="contact-icon">
+                    <p>GitHub: <a href="https://github.com/HowlLion" target="_blank">Github</a></p>
                 </div>
             </div>
     
@@ -216,4 +298,4 @@
 </script>
 
 </body>
-</html>
+    </html>
