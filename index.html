@@ -1,24 +1,239 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Samuel Wachira - ML Engineer & Data Analyst</title>
-    <meta name="description" content="Machine Learning Engineer & Data Analyst specializing in AI-powered solutions, NLP, computer vision, and cutting-edge ML models." />
-    <meta name="author" content="Samuel Wachira" />
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Samuel Wachira | ML Engineer Portfolio</title>
+  <link rel="icon" href="media/favicon.ico" type="image/x-icon">
 
-    <meta property="og:title" content="Samuel Wachira - ML Engineer & Data Analyst" />
-    <meta property="og:description" content="Machine Learning Engineer & Data Analyst specializing in AI-powered solutions, NLP, computer vision, and cutting-edge ML models." />
-    <meta property="og:type" content="website" />
-    <meta property="og:image" content="https://lovable.dev/opengraph-image-p98pqg.png" />
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;700&display=swap" rel="stylesheet">
 
-    <meta name="twitter:card" content="summary_large_image" />
-    <meta name="twitter:site" content="@lovable_dev" />
-    <meta name="twitter:image" content="https://lovable.dev/opengraph-image-p98pqg.png" />
-  </head>
+  <!-- CSS -->
+  <link rel="stylesheet" href="style.css">
 
-  <body>
-    <div id="root"></div>
-    <script type="module" src="/src/main.tsx"></script>
-  </body>
+  <style>
+    * {margin:0; padding:0; box-sizing:border-box; font-family:'Poppins', sans-serif;}
+
+    body {line-height:1.6; color:#222; background:#fafafa;}
+    a {text-decoration:none; color:inherit;}
+
+    /* Navbar */
+    header {
+      background:#fff;
+      box-shadow:0 2px 8px rgba(0,0,0,0.1);
+      position:sticky; top:0; z-index:1000;
+    }
+    nav {display:flex; justify-content:space-between; align-items:center; padding:1rem 2rem;}
+    .nav-links {display:flex; gap:1.5rem;}
+    .nav-links li {list-style:none;}
+    .nav-links a {font-weight:500; transition:.3s;}
+    .nav-links a:hover {color:#0077ff;}
+    .hamburger {display:none; font-size:1.5rem; cursor:pointer;}
+
+    /* Hero */
+    .hero {
+      height:90vh; display:flex; flex-direction:column;
+      justify-content:center; align-items:center; text-align:center;
+      background:linear-gradient(135deg,#0077ff,#00c4cc);
+      color:#fff; padding:2rem;
+    }
+    .hero h1 {font-size:2.8rem;}
+    .hero h2 {font-size:1.4rem; margin:1rem 0;}
+    .cta-btn {
+      margin-top:1rem; background:#fff; color:#0077ff;
+      padding:0.8rem 1.5rem; border-radius:30px;
+      font-weight:600; transition:.3s;
+    }
+    .cta-btn:hover {background:#0077ff; color:#fff;}
+
+    /* Sections */
+    section {padding:4rem 2rem; max-width:1200px; margin:auto;}
+    section h2 {text-align:center; margin-bottom:2rem; font-size:2rem; color:#0077ff;}
+
+    /* Projects */
+    .projects-container {
+      display:grid; grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
+      gap:2rem;
+    }
+    .project-card {
+      background:#fff; border-radius:12px; overflow:hidden;
+      box-shadow:0 4px 12px rgba(0,0,0,0.08);
+      transition:.3s; display:flex; flex-direction:column;
+    }
+    .project-card:hover {transform:translateY(-5px);}
+    .project-image {width:100%; height:200px; object-fit:cover;}
+    .project-info {padding:1rem;}
+    .details-btn {
+      margin-top:1rem; display:inline-block; padding:0.6rem 1.2rem;
+      background:#0077ff; color:#fff; border-radius:6px; transition:.3s;
+    }
+    .details-btn:hover {background:#005fcc;}
+
+    /* Skills */
+    .skills-container {
+      display:grid; grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
+      gap:1.5rem;
+    }
+    .skill-card {
+      background:#fff; padding:1.5rem; border-radius:10px;
+      box-shadow:0 2px 8px rgba(0,0,0,0.05); text-align:center;
+    }
+    .skill-card h3 {color:#0077ff; margin-bottom:0.5rem;}
+
+    /* About */
+    .about-container {
+      background:#fff; padding:2rem; border-radius:12px;
+      box-shadow:0 4px 12px rgba(0,0,0,0.08);
+    }
+
+    /* Contact */
+    .contact-container {
+      display:grid; grid-template-columns:1fr 1fr; gap:2rem;
+    }
+    .contact-info .contact-item {display:flex; align-items:center; gap:0.8rem; margin-bottom:1rem;}
+    .contact-icon {width:24px; height:24px;}
+    .contact-form {background:#fff; padding:2rem; border-radius:12px; box-shadow:0 2px 8px rgba(0,0,0,0.1);}
+    .contact-form input, .contact-form textarea {
+      width:100%; padding:0.8rem; margin-bottom:1rem;
+      border:1px solid #ccc; border-radius:6px;
+    }
+    .contact-form button {
+      background:#0077ff; color:#fff; border:none;
+      padding:0.8rem 1.5rem; border-radius:6px; cursor:pointer; transition:.3s;
+    }
+    .contact-form button:hover {background:#005fcc;}
+
+    /* Footer */
+    footer {text-align:center; padding:1rem; background:#222; color:#fff; margin-top:2rem;}
+
+    /* Back to top */
+    .back-to-top-btn {
+      position:fixed; bottom:20px; right:20px;
+      background:#0077ff; color:#fff; padding:0.6rem 1rem;
+      border-radius:50%; display:none; cursor:pointer;
+    }
+
+    /* Responsive */
+    @media(max-width:768px){
+      .nav-links {position:absolute; top:70px; right:0;
+        background:#fff; flex-direction:column; width:200px; display:none; box-shadow:0 2px 8px rgba(0,0,0,0.2);}
+      .nav-links.active {display:flex;}
+      .hamburger {display:block;}
+      .contact-container {grid-template-columns:1fr;}
+    }
+  </style>
+</head>
+<body>
+
+<header>
+  <nav>
+    <h2 style="color:#0077ff;">SW</h2>
+    <ul class="nav-links">
+      <li><a href="#">Home</a></li>
+      <li><a href="#about">About</a></li>
+      <li><a href="#projects">Projects</a></li>
+      <li><a href="#skills">Skills</a></li>
+      <li><a href="#contact">Contact</a></li>
+    </ul>
+    <div class="hamburger">&#9776;</div>
+  </nav>
+</header>
+
+<section class="hero">
+  <h1>Hi, I'm Samuel Wachira</h1>
+  <h2>Machine Learning Engineer & Data Analyst</h2>
+  <a href="#projects" class="cta-btn">See My Work</a>
+</section>
+
+<!-- Projects -->
+<section id="projects">
+  <h2>Projects</h2>
+  <div class="projects-container">
+    <!-- Example project -->
+    <div class="project-card">
+      <img src="media/Exp/vulnerabilitym.jpeg" alt="Security Project" class="project-image">
+      <div class="project-info">
+        <h3>Security Vulnerability Model</h3>
+        <p>Developed NLP models with TensorFlow to identify and prioritize vulnerabilities.</p>
+        <a href="electrix.html" class="details-btn">Learn More</a>
+      </div>
+    </div>
+    <!-- Add rest same way -->
+  </div>
+</section>
+
+<!-- Skills -->
+<section id="skills">
+  <h2>My Skills</h2>
+  <div class="skills-container">
+    <div class="skill-card">
+      <h3>Python</h3>
+      <p>Versatile for ML, AI, web & data analysis.</p>
+    </div>
+    <div class="skill-card">
+      <h3>TensorFlow</h3>
+      <p>Deep learning & ML model development.</p>
+    </div>
+    <!-- Add others -->
+  </div>
+</section>
+
+<!-- About -->
+<section id="about">
+  <h2>About Me</h2>
+  <div class="about-container">
+    <p>I’m a Machine Learning Engineer with hands-on experience building predictive models, NLP systems, and AI-powered insights tools.</p>
+  </div>
+</section>
+
+<!-- Contact -->
+<section id="contact">
+  <h2>Contact Me</h2>
+  <div class="contact-container">
+    <div class="contact-info">
+      <div class="contact-item"><img src="media/Icons/mail.jpeg" class="contact-icon"><p>Email: <a href="mailto:samuelwachira611@gmail.com">Mail</a></p></div>
+      <div class="contact-item"><img src="media/Icons/linkedin.png" class="contact-icon"><p><a href="https://linkedin.com/samuelwachira" target="_blank">LinkedIn</a></p></div>
+      <div class="contact-item"><img src="media/Icons/github.png" class="contact-icon"><p><a href="https://github.com/HowlLion" target="_blank">GitHub</a></p></div>
+    </div>
+    <div class="contact-form">
+      <form id="contact-form">
+        <input type="text" id="name" placeholder="Your Name" required>
+        <input type="email" id="email" placeholder="Your Email" required>
+        <textarea id="message" placeholder="Your Message" required></textarea>
+        <button type="submit">Send Message</button>
+      </form>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <p>&copy; 2024 Samuel Wachira. All rights reserved.</p>
+</footer>
+
+<a href="#" class="back-to-top-btn">&#8679;</a>
+
+<!-- Scripts -->
+<script>
+  // Hamburger menu
+  document.querySelector('.hamburger').addEventListener('click', () => {
+    document.querySelector('.nav-links').classList.toggle('active');
+  });
+
+  // Back to top
+  const backToTop = document.querySelector('.back-to-top-btn');
+  window.addEventListener('scroll', () => {
+    backToTop.style.display = window.scrollY > 300 ? 'block' : 'none';
+  });
+
+  // Smooth scroll
+  document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+    anchor.addEventListener('click', function(e){
+      e.preventDefault();
+      document.querySelector(this.getAttribute('href')).scrollIntoView({behavior:'smooth'});
+    });
+  });
+</script>
+</body>
 </html>
+
